@@ -1,9 +1,3 @@
-/******************************************************
- * Discord Bot Maker Bot
- * Version 2.1.5
- * Robert Borghese
- ******************************************************/
-
 const DBM = {};
 DBM.version = "2.1.5";
 
@@ -12,17 +6,12 @@ const DiscordJS = (DBM.DiscordJS = require("discord.js"));
 const requiredDjsVersion = "13.7.0";
 if (DiscordJS.version < requiredDjsVersion) {
   console.log(
-    `This version of Discord Bot Maker requires discord.js ${requiredDjsVersion}+.\nPlease use "Project > Module Manager" and "Project > Reinstall Node Modules" to update to discord.js ${requiredDjsVersion}.\n`,
+    `This Bot requires discord.js ${requiredDjsVersion}+.\n`,
   );
   throw new Error(`Need discord.js ${requiredDjsVersion} to run!!!`);
 }
 
 const noop = () => void 0;
-
-//---------------------------------------------------------------------
-//#region Output Messages
-// Gathered all the output messages in single place for easier translation.
-//---------------------------------------------------------------------
 
 const MsgType = {
   MISSING_ACTION: 0,
